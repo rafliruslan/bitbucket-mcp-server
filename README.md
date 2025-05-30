@@ -1,4 +1,5 @@
 # Bitbucket MCP Server
+[![smithery badge](https://smithery.ai/badge/@rafliruslan/bitbucket-mcp-server)](https://smithery.ai/server/@rafliruslan/bitbucket-mcp-server)
 
 A Model Context Protocol (MCP) server that provides integration with Bitbucket API for repositories, pull requests, and issues management.
 
@@ -12,6 +13,15 @@ A Model Context Protocol (MCP) server that provides integration with Bitbucket A
 
 ## Setup
 
+### Installing via Smithery
+
+To install Bitbucket Integration Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@rafliruslan/bitbucket-mcp-server):
+
+```bash
+npx -y @smithery/cli install @rafliruslan/bitbucket-mcp-server --client claude
+```
+
+### Installing Manually
 1. Install dependencies:
 ```bash
 npm install
