@@ -56,6 +56,50 @@ Create a Bitbucket App Password:
 ### Issue Management
 - `bitbucket_list_issues` - List repository issues
 
+## MCP Configuration
+
+### Claude Desktop
+
+Add this to your Claude Desktop configuration file:
+
+**macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+**Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "bitbucket": {
+      "command": "node",
+      "args": ["/path/to/bitbucket-mcp-server/build/index.js"],
+      "env": {
+        "BITBUCKET_USERNAME": "your-username",
+        "BITBUCKET_APP_PASSWORD": "your-app-password"
+      }
+    }
+  }
+}
+```
+
+### Cursor IDE
+
+Add this to your Cursor settings:
+
+1. Open Cursor settings (Cmd/Ctrl + ,)
+2. Search for "MCP" or go to Extensions > MCP
+3. Add a new server configuration:
+
+```json
+{
+  "name": "bitbucket",
+  "command": "node",
+  "args": ["/path/to/bitbucket-mcp-server/build/index.js"],
+  "env": {
+    "BITBUCKET_USERNAME": "your-username",
+    "BITBUCKET_APP_PASSWORD": "your-app-password"
+  }
+}
+```
+
 ## Development
 
 ```bash
